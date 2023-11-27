@@ -11,40 +11,40 @@ A robust data architecture is crucial for ensuring data quality, integrity, and 
 
 1. Data Source:
 
-"*" Spoonacular and Food Data API (Main_food dataset)
+* Spoonacular and Food Data API (Main_food dataset)
 
 2. ETL (Extract, Transform, Load) Pipeline:
 
-"*" Apache Airflow for orchestration and automation
-"*" Custom operators for extracting data from the API and loading it into Google Cloud Storage (GCS)
-"*" Google Cloud Storage (GCS) for intermediate storage of raw data
+* Apache Airflow for orchestration and automation
+* Custom operators for extracting data from the API and loading it into Google Cloud Storage (GCS)
+* Google Cloud Storage (GCS) for intermediate storage of raw data
 
 3. Data Warehouse:
 
-"*" Google BigQuery for data warehousing
-"*" Create a dedicated dataset in BigQuery (e.g., Main_food)
-"*" Use tables in BigQuery to store raw and transformed data
+* Google BigQuery for data warehousing
+* Create a dedicated dataset in BigQuery (e.g., Main_food)
+* Use tables in BigQuery to store raw and transformed data
 
 4. Data Transformation:
 
-"*" dbt (Data Build Tool) for data modeling, transformation, and analytics
-"*" Data Reporting and Visualization:
+* dbt (Data Build Tool) for data modeling, transformation, and analytics
+* Data Reporting and Visualization:
 
 5. Business Intelligence (BI) tools such as Tableau, Looker, or Google Data Studio
 
 # Dataset Description:
-"*" **Name**: Food Ingredients
-"*" **Category**: Recipes, Ingredients and Prices
-"*" **Data Source**: Spoonacular
-"*" **Description**: This dataset contains food recipes, ingredients and prices obtained and made public by Spoonacular.
+* **Name**: Food Ingredients
+* **Category**: Recipes, Ingredients and Prices
+* **Data Source**: Spoonacular
+* **Description**: This dataset contains food recipes, ingredients and prices obtained and made public by Spoonacular.
 
 **Columns in the Dataset- Data Dictionary**
 Rows - 39
 Columns - 7
 
-"*" **Name** (Text): The name of recipe or ingredient.
-"*" **Amount** (Float): The amount the ingredient was bought.
-"*" **Country** (Text): The country where the recipe originates.
+* **Name** (Text): The name of recipe or ingredient.
+* **Amount** (Float): The amount the ingredient was bought.
+* **Country** (Text): The country where the recipe originates.
 
 # Data Pipeline:
 The Eviction Notices Data Pipeline uses Apache Airflow to automate the process. Here's an overview:
