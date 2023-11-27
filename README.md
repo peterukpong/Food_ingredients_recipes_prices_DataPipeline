@@ -39,8 +39,8 @@ A robust data architecture is crucial for ensuring data quality, integrity, and 
 "*" **Description**: This dataset contains food recipes, ingredients and prices obtained and made public by Spoonacular.
 
 **Columns in the Dataset- Data Dictionary**
-Rows - 39k
-Columns - 16
+Rows - 39
+Columns - 7
 
 "*" **Name** (Text): The name of recipe or ingredient.
 "*" **Amount** (Float): The amount the ingredient was bought.
@@ -100,4 +100,3 @@ You can retrieve data from the FOOD dataset using the following SoQL query: http
 # Conclusion:
 The Food Recipes Inredients and Prices Data Pipeline automates data extraction, storage, and analysis from Spoonacular (food) API. It ensures data integrity and accessibility in Google Cloud Storage and BigQuery for further analysis and reporting.
 
-_Happy data engineering!_
