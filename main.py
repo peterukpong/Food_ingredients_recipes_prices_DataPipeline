@@ -89,7 +89,7 @@ with DAG(dag_id="LoadFoodDataFromWebToGCSToBQ",
     # Push data from Google Cloud Storage to BigQuery
     upload_to_bigquery = GCSToBigQueryOperator(
         task_id='upload_to_bigquery',
-        source_objects=['Food_recipe.csv'],
+        source_objects=['Food-Data.csv'],
         destination_project_dataset_table=f"{DATASET}.{OBJECT}_table",
         schema_fields=[],
         skip_leading_rows=1,
