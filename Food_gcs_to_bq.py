@@ -71,7 +71,7 @@ with DAG(dag_id="Load-Eviction-Data-From-Web-To-GCS-To-BQ",
 # Log messages to track task progress
 download_to_gcs.doc = """
 ## Download to GCS Task
-
+This Airflow DAG is designed to automate the process of fetching data from the Spoonacular and Food Open Data API, storing it in a Google Cloud Storage (GCS) bucket, and subsequently loading the data into a BigQuery table. The DAG is scheduled to run at 6:00 AM every month.
 """
 
 upload_to_bigquery.doc = """
