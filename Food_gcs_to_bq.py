@@ -35,9 +35,9 @@ with DAG(dag_id="Load-Eviction-Data-From-Web-To-GCS-To-BQ",
     # Fetch and store data from an API into Google Cloud Storage
     download_to_gcs = WebToGCSHKOperator(
         task_id='download_to_gcs',
-        gcs_bucket_name='eviction_data009',  # Specify the Google Cloud Storage bucket name
-        gcs_object_name='eviction_data.csv',  # Specify the GCS object name
-        api_endpoint='https://data.sfgov.org/resource/5cei-gny5.json',  # API endpoint URL
+        gcs_bucket_name='Main_food',  # Specify the Google Cloud Storage bucket name
+        gcs_object_name='Food-Data.csv',  # Specify the GCS object name
+        api_endpoint='',  # API endpoint URL
         api_headers={
             "X-App-Token": '',  # API token header
             "X-App-Secret": 'f4fa8a14706e47558346b15411ca4a9c',  # API secret header
@@ -59,7 +59,7 @@ with DAG(dag_id="Load-Eviction-Data-From-Web-To-GCS-To-BQ",
         create_disposition='CREATE_IF_NEEDED',  # Create the table if it doesn't exist
         write_disposition='WRITE_TRUNCATE',  # Overwrite existing data in the table
         autodetect=True,  # Automatically detect schema
-        bucket="eviction_data009",  # Specify the GCS bucket
+        bucket="Main_food",  # Specify the GCS bucket
     )
 
     # Create an ending dummy operator
@@ -71,7 +71,7 @@ with DAG(dag_id="Load-Eviction-Data-From-Web-To-GCS-To-BQ",
 # Log messages to track task progress
 download_to_gcs.doc = """
 ## Download to GCS Task
-This task is responsible for fetching data from the San Francisco Open Data API's EVICTION dataset and storing it in a Google Cloud Storage (GCS) bucket. The task connects to the API endpoint with the specified API token and parameters and saves the data as a CSV file in the GCS bucket. The CSV file is used as the source for the subsequent task.
+
 """
 
 upload_to_bigquery.doc = """
