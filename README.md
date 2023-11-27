@@ -39,8 +39,8 @@ A robust data architecture is crucial for ensuring data quality, integrity, and 
 "*" **Description**: This dataset contains food recipes, ingredients and prices obtained and made public by Spoonacular.
 
 **Columns in the Dataset- Data Dictionary**
-Rows - 39
-Columns - 6
+Rows - 39k
+Columns - 16
 
 "*" **Name** (Text): The name of recipe or ingredient.
 "*" **Amount** (Float): The amount the ingredient was bought.
