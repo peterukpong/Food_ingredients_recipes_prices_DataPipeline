@@ -37,7 +37,7 @@ with DAG(dag_id="Load-Eviction-Data-From-Web-To-GCS-To-BQ",
         task_id='download_to_gcs',
         gcs_bucket_name='Main_food',  # Specify the Google Cloud Storage bucket name
         gcs_object_name='Food-Data.csv',  # Specify the GCS object name
-        api_endpoint='',  # API endpoint URL
+        api_endpoint='https://api.spoonacular.com/recipes/1003464/priceBreakdownWidget.json',  # API endpoint URL
         api_headers={
             "X-App-Token": '',  # API token header
             "X-App-Secret": 'f4fa8a14706e47558346b15411ca4a9c',  # API secret header
